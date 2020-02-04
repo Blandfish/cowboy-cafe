@@ -6,12 +6,12 @@ namespace CowboyCafe.Data
     /// <summary>
     /// class for the texas triple burger
     /// </summary>
-    public class TexasTripleBurger
+    public class TexasTripleBurger : Entree
     {
         /// <summary>
         /// the price of the Texas Triple Burger
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -21,7 +21,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// the calorie content of the Texis Triple Burger
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -132,7 +132,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// prints instructions for the order
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
