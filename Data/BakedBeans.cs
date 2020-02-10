@@ -1,25 +1,24 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class ChiliCheeseFries : Side
+    public class BakedBeans : Side
     {
         public override uint Calories
         {
             get
             {
-                switch(Size)
+                switch (Size)
                 {
                     case Size.Small:
-                        return 433;
+                        return 312;
                         break;
                     case Size.Medium:
-                        return 524;
+                        return 378;
                         break;
                     case Size.Large:
-                        return 610;
+                        return 410;
                         break;
                     default:
                         throw new NotImplementedException();
@@ -31,16 +30,16 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch(Size)
+                switch (Size)
                 {
                     case Size.Small:
-                        return 1.99;
+                        return 1.59;
                         break;
                     case Size.Medium:
-                        return 2.99;
+                        return 1.79;
                         break;
                     case Size.Large:
-                        return 3.99;
+                        return 1.99;
                         break;
                     default:
                         throw new NotImplementedException();
