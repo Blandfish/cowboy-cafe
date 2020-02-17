@@ -3,8 +3,15 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// class for the Jerked Soda menu item
+    /// </summary>
     public class JerkedSoda : Drink
     {
+
+        /// <summary>
+        /// getter returns the price of the jerked soda at various sizes.
+        /// </summary>
         public override double Price
         {
             get
@@ -25,6 +32,10 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        /// <summary>
+        /// getter returns the calorie count of the jerked soda at various sizes
+        /// </summary>
         public override uint Calories
         {
             get
@@ -45,12 +56,18 @@ namespace CowboyCafe.Data
                 }
             }
         }
-
+        /// <summary>
+        ///  stores the flavor of the soda
+        /// </summary>
         public SodaFlavor Flavor
         {
             get;
             set;
         }
+
+        /// <summary>
+        /// getter returns a list of special instructions for the jerked soda.
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

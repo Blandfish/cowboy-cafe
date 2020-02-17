@@ -47,7 +47,7 @@ namespace CowboyCafe.Data
             }
         }
 
-        public override bool Ice = false;
+        new public bool Ice = false;
 
         private bool roomForCream = false;
         public bool RoomForCream
@@ -55,8 +55,6 @@ namespace CowboyCafe.Data
             get { return roomForCream; }
             set { roomForCream = value; }
         }
-
-        private bool sweet = true;
 
         
         
@@ -69,7 +67,7 @@ namespace CowboyCafe.Data
                 var instructions = new List<string>();
 
                 if (Ice) instructions.Add("Add Ice");
-                if (RoomForCream) instructions.Add("Room for Cream")
+                if (RoomForCream) instructions.Add("Room for Cream");
 
                 return instructions;
             }

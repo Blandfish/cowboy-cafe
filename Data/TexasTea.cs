@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// class for the texas tea menu item.
+    /// </summary>
     public class TexasTea : Drink
     {
+        /// <summary>
+        /// used to get the price for different sizes of Texas Tea.
+        /// </summary>
         public override double Price
         {
             get
@@ -25,6 +31,10 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        /// <summary>
+        /// used to get the calorie count for different sizes of tea.
+        /// </summary>
         public override uint Calories
         {
             get
@@ -32,20 +42,34 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 10 * (!Sweet/2);
+                        if (!sweet)
+                        {
+                            return 5;
+                        }
+                        else return 10;
                         break;
                     case Size.Medium:
-                        return 22 * (!Sweet / 2);
+                        if (!sweet)
+                        {
+                            return 11;
+                        }
+                        else return 22;
                         break;
                     case Size.Large:
-                        return 36 * (!Sweet / 2);
+                        if (!sweet)
+                        {
+                            return 18;
+                        }
+                        else return 36;
                         break;
                     default:
                         throw new NotImplementedException();
                 }
             }
         }
-
+        /// <summary>
+        /// true == sweet tea
+        /// </summary>
         private bool sweet = true;
 
         public bool Sweet
@@ -53,8 +77,10 @@ namespace CowboyCafe.Data
             get { return sweet; }
             set { sweet = value; }
         }
-
-        private bool lemon = fales;
+        /// <summary>
+        /// true == tea contains lemon
+        /// </summary>
+        private bool lemon = false;
 
         public bool Lemon
         {
@@ -62,7 +88,9 @@ namespace CowboyCafe.Data
             set { Lemon = value; }
         }
 
-
+        /// <summary>
+        /// list of special instructions for the drink.
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

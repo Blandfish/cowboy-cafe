@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// class for the water menu item
+    /// </summary>
     public class Water : Drink
     {
+        /// <summary>
+        /// getter returns price of water
+        /// </summary>
         public override double Price
         {
             get
@@ -12,6 +18,10 @@ namespace CowboyCafe.Data
                 return .12;
             }
         }
+
+        /// <summary>
+        /// getter returns calorie count of water
+        /// </summary>
         public override uint Calories
         {
             get
@@ -19,8 +29,11 @@ namespace CowboyCafe.Data
                 return 0;
             }
         }
-
-        private bool lemon = fales;
+        
+        /// <summary>
+        /// stores whether the drink has a lemon
+        /// </summary>
+        private bool lemon = false;
 
         public bool Lemon
         {
@@ -28,6 +41,9 @@ namespace CowboyCafe.Data
             set { Lemon = value; }
         }
 
+        /// <summary>
+        /// contains special instructions for the drink.
+        /// </summary>
 
         public override List<string> SpecialInstructions
         {
