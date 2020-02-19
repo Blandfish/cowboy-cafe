@@ -23,11 +23,17 @@ namespace PointOfSale
         {
             InitializeComponent();
             AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
+
         }
 
         void OnAddCowpokeChiliButtonClicked(Object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new CowpokeChili());
+        }
+
+        void OnAddAngryChickenButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new AngryChicken());
         }
     }
 }
