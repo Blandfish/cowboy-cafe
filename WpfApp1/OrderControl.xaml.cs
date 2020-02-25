@@ -35,5 +35,67 @@ namespace PointOfSale
         {
             OrderListView.Items.Add(new AngryChicken());
         }
+
+        void OnAddBakedBeansButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new BakedBeans());
+        }
+
+        void OnAddChiliCheeseFriesButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new ChiliCheeseFries());
+        }
+
+        void OnAddCornDodgersButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new CornDodgers());
+        }
+
+        void OnAddDakotaDoubleBurgerButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new DakotaDoubleBurger());
+        }
+
+        void OnAddJerkedSodaButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new JerkedSoda());
+        }
+
+        void OnAddPanDeCampoButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new PanDeCampo());
+        }
+
+        void OnAddPecosPulledPorkButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new PecosPulledPork());
+        }
+
+        void OnAddRustlersRibsButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new RustlersRibs());
+        }
+
+        void OnAddTexasTeaButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new TexasTea());
+        }
+
+        void OnAdTexasTripleBurgerButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new TexasTripleBurger());
+        }
+
+        void OnAddTrailBurgerButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new TrailBurger());
+        }
+
+        void OnAddWaterButtonClicked(Object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new Water());
+        }
+
+
     }
 }
