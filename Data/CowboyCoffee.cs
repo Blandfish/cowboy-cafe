@@ -56,8 +56,14 @@ namespace CowboyCafe.Data
             set { roomForCream = value; }
         }
 
-        
-        
+       
+        private bool decaf = false;
+        public bool Decaf
+        {
+            get { return Decaf; }
+            set { decaf = value; }
+        }
+
 
 
         public override List<string> SpecialInstructions
