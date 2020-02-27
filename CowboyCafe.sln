@@ -14,10 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{3E71AAFF-D155-46EF-82E9-AAEDB4C75011}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\CowboyCafe(POSMilestone1).pdf = ..\..\..\Downloads\CowboyCafe(POSMilestone1).pdf
 		..\..\..\Downloads\CowboyCafe.pdf = ..\..\..\Downloads\CowboyCafe.pdf
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale", "WpfApp1\PointOfSale.csproj", "{CB854B1F-4B75-4245-9351-37B973FD0CC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointOfSale", "WpfApp1\PointOfSale.csproj", "{CB854B1F-4B75-4245-9351-37B973FD0CC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
