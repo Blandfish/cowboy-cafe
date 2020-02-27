@@ -9,8 +9,15 @@ namespace CowboyCafe.Data
     /// </summary>
     public interface IOrderItem
     {
+
+        /// <summary>
+        /// price of item
+        /// </summary>
         double Price { get; }
 
+        /// <summary>
+        /// list of instructions for the item
+        /// </summary>
         List<string> SpecialInstructions { get; }
     }
 }

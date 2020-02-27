@@ -47,7 +47,9 @@ namespace CowboyCafe.Data
             }
         }
 
-
+        /// <summary>
+        /// override of ToString()
+        /// </summary>
         public override string ToString()
         {
             return "Baked Beans";

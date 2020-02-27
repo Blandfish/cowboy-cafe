@@ -46,7 +46,9 @@ namespace CowboyCafe.Data
                 }
             }
         }
-
+        /// <summary>
+        /// override of ToString()
+        /// </summary>
         public override string ToString()
         {
             return "Pan De Campo";

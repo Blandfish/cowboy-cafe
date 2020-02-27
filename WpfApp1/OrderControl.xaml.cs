@@ -19,6 +19,9 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        /// event listeners for buttons on order control
+        /// </summary>
         public OrderControl()
         {
             InitializeComponent();
@@ -39,7 +42,11 @@ namespace PointOfSale
             AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
             AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
         }
-
+        /// <summary>
+        /// event handlers for Menu item buttons
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnAddCowpokeChiliButtonClicked(Object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new CowpokeChili());
