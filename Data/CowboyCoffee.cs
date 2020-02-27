@@ -60,7 +60,7 @@ namespace CowboyCafe.Data
         private bool decaf = false;
         public bool Decaf
         {
-            get { return Decaf; }
+            get { return decaf; }
             set { decaf = value; }
         }
 

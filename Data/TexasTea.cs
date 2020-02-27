@@ -67,11 +67,17 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        private bool ice = true;
+        public bool Ice
+        {
+            get { return ice; }
+            set {ice = value; }
+        }
         /// <summary>
         /// true == sweet tea
         /// </summary>
         private bool sweet = true;
-
         public bool Sweet
         {
             get { return sweet; }
@@ -85,7 +91,7 @@ namespace CowboyCafe.Data
         public bool Lemon
         {
             get { return lemon; }
-            set { Lemon = value; }
+            set { lemon = value; }
         }
 
         /// <summary>
