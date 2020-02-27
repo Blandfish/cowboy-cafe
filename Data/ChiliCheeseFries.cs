@@ -52,7 +52,18 @@ namespace CowboyCafe.Data
         /// </summary>
         public override string ToString()
         {
-            return "Chili CheeseFries";
+            if (this.Size == Size.Small)
+            {
+                return "Small Chili Cheese Fries";
+            }
+            else if (this.Size == Size.Medium)
+            {
+                return "Medium Chili Cheese Fries";
+            }
+            else if (this.Size == Size.Large) ;
+            {
+                return "Large Chili Cheese Fries";
+            }
         }
     }
 }

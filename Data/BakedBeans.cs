@@ -52,7 +52,18 @@ namespace CowboyCafe.Data
         /// </summary>
         public override string ToString()
         {
-            return "Baked Beans";
+            if (this.Size == Size.Small)
+            {
+                return "Small Baked Beans";
+            }
+            else if (this.Size == Size.Medium)
+            {
+                return "Medium Baked Beans";
+            }
+            else if (this.Size == Size.Large) ;
+            {
+                return "Large Baked Beans";
+            }
         }
     }
 }

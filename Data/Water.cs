@@ -43,7 +43,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// stores whether the drink has ice
         /// </summary>
-        private bool ice = false;
+        private bool ice = true;
 
         public bool Ice
         {
@@ -71,9 +71,21 @@ namespace CowboyCafe.Data
         /// override of ToString()
         /// </summary>
         /// <returns></returns>
+        
         public override string ToString()
         {
-            return "Water";
+            if (this.Size == Size.Small)
+            {
+                return "Small Water";
+            }
+            else if (this.Size == Size.Medium)
+            {
+                return "Medium Water";
+            }
+            else if (this.Size == Size.Large) ;
+            {
+                return "Large Water";
+            }
         }
     }
 }

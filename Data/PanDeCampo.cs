@@ -51,7 +51,18 @@ namespace CowboyCafe.Data
         /// </summary>
         public override string ToString()
         {
-            return "Pan De Campo";
+            if (this.Size == Size.Small)
+            {
+                return "Small Pan de Campo";
+            }
+            else if (this.Size == Size.Medium)
+            {
+                return "Medium Pan de Campo";
+            }
+            else if (this.Size == Size.Large) ;
+            {
+                return "Large Pan de Campo";
+            }
         }
     }
 }
