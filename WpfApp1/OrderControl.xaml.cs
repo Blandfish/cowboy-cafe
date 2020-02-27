@@ -23,6 +23,7 @@ namespace PointOfSale
         {
             InitializeComponent();
             AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
+            AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
 
         }
 
