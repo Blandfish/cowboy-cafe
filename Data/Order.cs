@@ -1,25 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
-    public class Order
+    public class Order : INotifyPropertyChanged
     {
+
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// holds the set of items ordered
         /// </summary>
-        public IEnumerable<IOrderItem> Items => throw new NotImplementedException();
+        public IEnumerable<IOrderItem> Items
+        {
+            get { return items; }
+        }
+        
         /// <summary>
         /// holds final price pretax
         /// </summary>
-        public double Subtotal => 0;
+        /// 
+        private List<IOrderItem> items;
+        public double Subtotal
+        {
+            
+            get
+            {
+                double sub = 0;
+                foreach (IOrderItem i in Items)
+                {
+                    sub += i.Price;
+                }
+                return sub;
+            }
+        }
+
+        public uint OrderNumber { get; }
         /// <summary>
         /// adds an item to the order
         /// </summary>
         /// <param name="item"></param>
-        public void Add(IOrderItem item) { }
+        public void Add(IOrderItem item) 
+        { 
+            items.Add(item);
+            PropertyChanged(this, new PropertyChangedEventArgs("Add"));
+        }
+        /// <summary>
+        /// removes an item from the order
+        /// </summary>
+        /// <param name="item"></param>
+        public void Remove(IOrderItem item) 
+        { 
+            items.Remove(item);
+            PropertyChanged(this, new PropertyChangedEventArgs("Remove"));
+        }
 
-        public void Remove(IOrderItem item) { }
+        
     }
 }
