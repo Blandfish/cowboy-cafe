@@ -44,7 +44,7 @@ namespace CowboyCafe.Data
         public void Add(IOrderItem item) 
         { 
             items.Add(item);
-            PropertyChanged(this, new PropertyChangedEventArgs("Add"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
         /// <summary>
         /// removes an item from the order
@@ -53,7 +53,7 @@ namespace CowboyCafe.Data
         public void Remove(IOrderItem item) 
         { 
             items.Remove(item);
-            PropertyChanged(this, new PropertyChangedEventArgs("Remove"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
 
         
