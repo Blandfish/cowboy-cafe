@@ -15,8 +15,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
-            
-            
+
+
         </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
             <ColumnDefinition Name="MenuItemLocation" Width="500"/>
@@ -29,7 +29,19 @@
             
         </StackPanel>
         <local:OrderSummaryControl x:Name ="OrderListView" Grid.Column=" 3" Grid.Row=" 1"/>
-        <local:MenuItemSelectionControl x:Name="MenuItemSelection" Grid.Column="0" Grid.Row="1"/>
+        <Border x:Name="Container" Grid.Column="0">
+            <StackPanel>
+                <local:MenuItemSelectionControl x:Name="MenuItemSelection" Grid.Column="0" Grid.Row="0"/>
+                <DockPanel>
+                    <Button DockPanel.Dock="Left" MinWidth="100">1</Button>
+                    <Button MinWidth="100">2</Button>
+                    <Button DockPanel.Dock="Right" MinWidth="100">3</Button>
+                </DockPanel>
+                
+            </StackPanel>
+            
+        </Border>
+        
 
     </Grid>
 </UserControl>

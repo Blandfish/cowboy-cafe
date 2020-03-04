@@ -32,6 +32,11 @@ namespace PointOfSale
 
            
         }
+        // may need to be disabled
+        public void SwapScreen(UIElement element)
+        {
+            Container.Child = element;
+        }
 
 
         

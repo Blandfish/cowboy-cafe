@@ -10,19 +10,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using CowboyCafe.Extensions;
+
 
 namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for MenuItemSelectionControl.xaml
     /// </summary>
-    public partial class MenuItemSelectionControl : UserControl//????????????????????????????????????????????????????????????????????????
+    public partial class MenuItemSelectionControl : UserControl
     {
+        private OrderControl orderControl;
+
         public MenuItemSelectionControl()
         {
             InitializeComponent();
-            AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
-            /* AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
+
+            
+
+            AddCowpokeChiliButton.Click += OnItemAddButtonClicked; // changed may need to revert for milestone2
+
+            /* AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
+             * AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
              AddBakedBeansButton.Click += OnAddBakedBeansButtonClicked;
              AddCornDodgersButton.Click += OnAddCornDodgersButtonClicked;
              AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerButtonClicked;
@@ -41,11 +50,29 @@ namespace PointOfSale
 
         }
 
+        /* alternative to hold everything in one method with parts from */
+        public void OnItemAddButtonClicked(object sender,RoutedEventArgs e)
+        {
+            orderControl = this.FindAncestor<OrderControl>();
+            if (DataContext is Order order)
+            {
+                if (sender is Button button)
+                {
+                    switch(button.Tag)
+                    {
+                        case "CowpokeChili":
+
+                            order.Add(new CowpokeChili());
+                            orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                    }
+                }
+            }
+        }
+        
 
 
-
-
-        void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
+        /*void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
         {
 
             ((Order)DataContext).Add(new CowpokeChili());

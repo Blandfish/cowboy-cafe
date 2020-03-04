@@ -7,7 +7,7 @@
         mc:Ignorable="d">
     <UserControl.Resources>
         <Style TargetType="Button" >
-            <Setter Property="Height" Value=" 50px"/>
+            <Setter Property="Height" Value=" 55px"/>
             <Setter Property="FontSize" Value=" 18"/>
         </Style>
     </UserControl.Resources>
@@ -24,7 +24,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column= "0">
             <TextBlock FontSize=" 14" TextAlignment="Center">Entree</TextBlock>
-            <Button Name ="AddCowpokeChiliButton">Cowpoke Chili</Button>
+            <Button Name ="AddCowpokeChiliButton" Tag="CowpokeChili">Cowpoke Chili</Button>
             <Button Name ="AddAngryChickenButton">Angry Chicken</Button>
             <Button Name ="AddRustlersRibsButton">Rustler's Ribs</Button>
             <Button Name ="AddPecosPulledPorkButton">Peco's Pulled Pork</Button>

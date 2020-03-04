@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="400">
+             d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Name ="OrderNumber" Height =" 35"/>
@@ -16,19 +16,22 @@
         
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=" 300"/>
+            <ColumnDefinition Width=" 200"/>
             <ColumnDefinition Width=" 100"/>
            
             
         </Grid.ColumnDefinitions>
 
         <ListBox  Name ="OrderList" Grid.Row=" 1" Grid.Column="0" ItemsSource="{Binding Items}"/>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Path=OrderNumber}"/>
+        
+        <TextBlock HorizontalAlignment="Right" FontSize="24" Grid.Row="0" Grid.Column="0" Text="{Binding Path=OrderNumber}"/>
 
         <DockPanel Grid.Row="2" Grid.Column="0">
             <TextBlock DockPanel.Dock="Right" Name="Subtotal" Text="{Binding Path=Subtotal, StringFormat=c}"/>
             <TextBlock DockPanel.Dock="Left" Text="Subtotal:" FontSize=" 18"/>
         </DockPanel>
+        
+        
 
 
 
