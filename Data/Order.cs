@@ -7,8 +7,17 @@ namespace CowboyCafe.Data
 {
     public class Order : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
+
+
+        public Order()//??????????????
+        {
+            AngryChicken testItem = new AngryChicken();
+            items.Add(testItem);
+
+            OrderNumber += 1;
+
+        }
         /// <summary>
         /// holds the set of items ordered
         /// </summary>
@@ -21,7 +30,7 @@ namespace CowboyCafe.Data
         /// holds final price pretax
         /// </summary>
         /// 
-        private List<IOrderItem> items;
+        private List<IOrderItem> items = new List<IOrderItem>();
         public double Subtotal
         {
             

@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using CowboyCafe.Data;
 
 namespace PointOfSale
@@ -17,36 +19,45 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for OrderControl.xaml
     /// </summary>
-    public partial class OrderControl : UserControl
+    public partial class OrderControl : UserControl, INotifyPropertyChanged
     {
         /// <summary>
         /// event listeners for buttons on order control
         /// </summary>
         public OrderControl()
         {
+            DataContext = this;
             InitializeComponent();
-            AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
-            AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
-            AddBakedBeansButton.Click += OnAddBakedBeansButtonClicked;
-            AddCornDodgersButton.Click += OnAddCornDodgersButtonClicked;
-            AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerButtonClicked;
-            AddPanDeCampoButton.Click += OnAddPanDeCampoButtonClicked;
-            AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
-            AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
-            AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
-            AddTrailBurgerButton.Click += OnAddTrailBurgerButtonClicked;
-            AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClicked;
+            Order CurrentOrder = new Order();
 
-            AddTexasTeaButton.Click += OnAddTexasTeaButtonClicked;
-            AddWaterButton.Click += OnAddWaterButtonClicked;
-            AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
-            AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
+            /* 
+             AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
+             AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
+             AddBakedBeansButton.Click += OnAddBakedBeansButtonClicked;
+             AddCornDodgersButton.Click += OnAddCornDodgersButtonClicked;
+             AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerButtonClicked;
+             AddPanDeCampoButton.Click += OnAddPanDeCampoButtonClicked;
+             AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
+             AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
+             AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
+             AddTrailBurgerButton.Click += OnAddTrailBurgerButtonClicked;
+             AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClicked;
+
+             AddTexasTeaButton.Click += OnAddTexasTeaButtonClicked;
+             AddWaterButton.Click += OnAddWaterButtonClicked;
+             AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
+             AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
+             */
         }
-        /// <summary>
-        /// event handlers for Menu item buttons
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /*
         void OnAddCowpokeChiliButtonClicked(Object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new CowpokeChili());
@@ -119,9 +130,10 @@ namespace PointOfSale
 
         void OnAddCowboyCoffeeButtonClicked(Object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new CowboyCoffee());
+            OrderListView.DataContext.(new CowboyCoffee());
         }
 
-
+        }
+        */
     }
 }
