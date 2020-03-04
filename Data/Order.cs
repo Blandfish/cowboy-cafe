@@ -30,6 +30,8 @@ namespace CowboyCafe.Data
         /// holds final price pretax
         /// </summary>
         /// 
+
+
         private List<IOrderItem> items = new List<IOrderItem>();
         public double Subtotal
         {
@@ -55,6 +57,8 @@ namespace CowboyCafe.Data
             items.Add(item);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items.Price"));
         }
         /// <summary>
         /// removes an item from the order
