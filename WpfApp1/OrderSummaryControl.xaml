@@ -13,9 +13,9 @@
             <RowDefinition Height=" 35"/>
 
         </Grid.RowDefinitions>
-        <TextBox  Name ="OrderList" Grid.Row=" 1" Grid.Column="0" Text="{Binding Items}"/>
+        <ListBox  Name ="OrderList" Grid.Row=" 1" Grid.Column="0" ItemsSource="{Binding Items}"/>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Path=OrderNumber}"/>
-        <TextBox Name ="Subtotal" Grid.Row="2" Grid.Column="1" Text="{Binding Path=Subtotal, StringFormat=c}"/>
+        <TextBlock Name ="Subtotal" Grid.Row="2" Grid.Column="1" Text="{Binding Path=Subtotal, StringFormat=c}"/>
         <TextBlock Grid.Row="10" Grid.Column="0" Text="Subtotal:" FontSize=" 18"/>
         
 

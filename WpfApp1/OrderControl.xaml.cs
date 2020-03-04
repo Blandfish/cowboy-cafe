@@ -19,16 +19,16 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for OrderControl.xaml
     /// </summary>
-    public partial class OrderControl : UserControl, INotifyPropertyChanged
+    public partial class OrderControl : UserControl
     {
         /// <summary>
         /// event listeners for buttons on order control
         /// </summary>
         public OrderControl()
         {
-            DataContext = this;
             InitializeComponent();
             Order CurrentOrder = new Order();
+            DataContext = CurrentOrder;
 
             /* 
              AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
@@ -48,13 +48,6 @@ namespace PointOfSale
              AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
              AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
              */
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         /*

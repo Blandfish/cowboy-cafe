@@ -25,10 +25,6 @@ namespace PointOfSale
         public OrderSummaryControl()
         {
             InitializeComponent();
-            Order CurrentOrder = new Order();
-            OrderList.DataContext = CurrentOrder;
-            Subtotal.DataContext = CurrentOrder;
-            OrderNumber.DataContext = CurrentOrder;
         }
     }
 }
