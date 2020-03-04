@@ -19,40 +19,17 @@
             
         </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+            <ColumnDefinition Name="MenuItemLocation" Width="500"/>
+            <ColumnDefinition Name ="OrderSumLocation" Width=" 300"/>
+                
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column= "0">
-            <TextBlock FontSize=" 18" TextAlignment="Center">Entree</TextBlock>
-            <Button Name ="AddCowpokeChiliButton">Cowpoke Chili</Button>
-            <Button Name ="AddAngryChickenButton">Angry Chicken</Button>
-            <Button Name ="AddRustlersRibsButton">Rustler's Ribs</Button>
-            <Button Name ="AddPecosPulledPorkButton">Peco's Pulled Pork</Button>
-            <Button Name ="AddTrailBurgerButton">Trail Burger</Button>
-            <Button Name ="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
-            <Button Name ="AddTexasTripleBurgerButton">Texas TripleBurger</Button>
-        </StackPanel>
-        <StackPanel Grid.Column ="1" >
-            <TextBlock FontSize=" 18" TextAlignment="Center"> side</TextBlock>
-            <Button Name ="AddBakedBeansButton">Baked Beans</Button>
-            <Button Name ="AddChiliCheeseFriesButton">Chili Cheese Fries</Button>
-            <Button Name ="AddCornDodgersButton">Corn Dodgers</Button>
-            <Button Name ="AddPanDeCampoButton">PanDeCampo</Button>
-        </StackPanel>
-        <StackPanel Grid.Column ="2" >
-            <TextBlock FontSize=" 18" TextAlignment="Center"> Drink</TextBlock>
-            <Button Name ="AddWaterButton">Water</Button>
-            <Button Name ="AddTexasTeaButton">Texas Tea</Button>
-            <Button Name ="AddJerkedSodaButton">Jerked Soda</Button>
-            <Button Name ="AddCowboyCoffeeButton">Cowboy Coffee</Button>
-        </StackPanel>
+        
         <StackPanel Grid.Column=" 3">
             <TextBlock FontSize=" 18" TextAlignment="Center"> Order</TextBlock>
             
         </StackPanel>
         <local:OrderSummaryControl x:Name ="OrderListView" Grid.Column=" 3" Grid.Row=" 1"/>
+        <local:MenuItemSelectionControl x:Name="MenuItemSelection" Grid.Column="0" Grid.Row="1"/>
 
     </Grid>
 </UserControl>
