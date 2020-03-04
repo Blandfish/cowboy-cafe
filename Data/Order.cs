@@ -23,7 +23,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public IEnumerable<IOrderItem> Items
         {
-            get { return items; }
+            get { return items.ToArray(); }
         }
         
         /// <summary>
@@ -54,6 +54,7 @@ namespace CowboyCafe.Data
         { 
             items.Add(item);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
         /// <summary>
         /// removes an item from the order
@@ -63,6 +64,7 @@ namespace CowboyCafe.Data
         { 
             items.Remove(item);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
 
         

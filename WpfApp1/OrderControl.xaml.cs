@@ -30,32 +30,33 @@ namespace PointOfSale
             Order CurrentOrder = new Order();
             DataContext = CurrentOrder;
 
-            /* 
-             AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
-             AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
-             AddBakedBeansButton.Click += OnAddBakedBeansButtonClicked;
-             AddCornDodgersButton.Click += OnAddCornDodgersButtonClicked;
-             AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerButtonClicked;
-             AddPanDeCampoButton.Click += OnAddPanDeCampoButtonClicked;
-             AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
-             AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
-             AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
-             AddTrailBurgerButton.Click += OnAddTrailBurgerButtonClicked;
-             AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClicked;
+            
+            AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
+           /* AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
+            AddBakedBeansButton.Click += OnAddBakedBeansButtonClicked;
+            AddCornDodgersButton.Click += OnAddCornDodgersButtonClicked;
+            AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerButtonClicked;
+            AddPanDeCampoButton.Click += OnAddPanDeCampoButtonClicked;
+            AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
+            AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
+            AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
+            AddTrailBurgerButton.Click += OnAddTrailBurgerButtonClicked;
+            AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClicked;
 
-             AddTexasTeaButton.Click += OnAddTexasTeaButtonClicked;
-             AddWaterButton.Click += OnAddWaterButtonClicked;
-             AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
-             AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
+            AddTexasTeaButton.Click += OnAddTexasTeaButtonClicked;
+            AddWaterButton.Click += OnAddWaterButtonClicked;
+            AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
+            AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
              */
         }
 
-        /*
+
         void OnAddCowpokeChiliButtonClicked(Object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new CowpokeChili());
-        }
 
+            ((Order)DataContext).Add(new CowpokeChili());
+                
+        }        /*
         void OnAddAngryChickenButtonClicked(Object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new AngryChicken());
