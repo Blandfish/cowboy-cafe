@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
         <ListBox  Name ="OrderList" Grid.Row=" 1" Grid.Column="0" ItemsSource="{Binding Items}"/>
-        
+
         <TextBlock HorizontalAlignment="Right" FontSize="24" Grid.Row="0" Grid.Column="0" Text="{Binding Path=OrderNumber}"/>
 
         <DockPanel Grid.Row="2" Grid.Column="0">
