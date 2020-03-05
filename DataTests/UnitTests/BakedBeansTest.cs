@@ -52,5 +52,6 @@ namespace CowboyCafe.DataTests
             beans.Size = size;
             Assert.Equal<uint>(calories, beans.Calories);
         }
+
     }
 }

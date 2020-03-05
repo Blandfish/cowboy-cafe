@@ -25,6 +25,8 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        //default constructor baked beans
+        
 
         public override double Price
         {

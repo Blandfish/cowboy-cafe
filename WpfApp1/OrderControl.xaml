@@ -33,9 +33,9 @@
             <StackPanel>
                 <local:MenuItemSelectionControl x:Name="MenuItemSelection" Grid.Column="0" Grid.Row="0"/>
                 <DockPanel>
-                    <Button DockPanel.Dock="Left" MinWidth="120">Cancel Order</Button>
-                    <Button MinWidth="100">Complete Order</Button>
-                    <Button DockPanel.Dock="Right" MinWidth="110">Item Selection</Button>
+                    <Button Name ="CancelOrderButton" DockPanel.Dock="Left" MinWidth="120">Cancel Order</Button>
+                    <Button MinWidth="100" x:Name="NewOrderButton">Complete Order</Button>
+                    <Button x:Name ="ItemSelectionButton" DockPanel.Dock="Right" MinWidth="110">Item Selection</Button>
                 </DockPanel>
                 
             </StackPanel>

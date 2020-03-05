@@ -12,8 +12,8 @@ namespace CowboyCafe.Data
 
         public Order()//??????????????
         {
-            AngryChicken testItem = new AngryChicken();
-            items.Add(testItem);
+            /*AngryChicken testItem = new AngryChicken();
+            items.Add(testItem);*/
 
             OrderNumber += 1;
 
@@ -47,7 +47,7 @@ namespace CowboyCafe.Data
             }
         }
 
-        public uint OrderNumber { get; }
+        public static uint OrderNumber { get; set; }
         /// <summary>
         /// adds an item to the order
         /// </summary>

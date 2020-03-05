@@ -29,9 +29,14 @@
                         <Grid>
                             <TextBlock Text="{Binding}"></TextBlock>
                         </Grid>
+                        <Grid>
+                            <TextBlock Text="           ">
+                                
+                            </TextBlock>
+                        </Grid>
                         <Grid DockPanel.Dock="Right">
 
-                            <TextBlock HorizontalAlignment="Right" Text="{Binding Path=Price}"/>
+                            <TextBlock HorizontalAlignment="Right" Text="{Binding Path=Price, StringFormat=c}"/>
                         </Grid>
                     </DockPanel>
                     

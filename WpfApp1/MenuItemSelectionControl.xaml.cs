@@ -26,31 +26,32 @@ namespace PointOfSale
         {
             InitializeComponent();
 
-            
+            //Event listeners for menuitem buttons
 
             AddCowpokeChiliButton.Click += OnItemAddButtonClicked; // changed may need to revert for milestone2
-
-            /* AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
-             * AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
-             AddBakedBeansButton.Click += OnAddBakedBeansButtonClicked;
-             AddCornDodgersButton.Click += OnAddCornDodgersButtonClicked;
-             AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerButtonClicked;
-             AddPanDeCampoButton.Click += OnAddPanDeCampoButtonClicked;
-             AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
-             AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
-             AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
-             AddTrailBurgerButton.Click += OnAddTrailBurgerButtonClicked;
-             AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClicked;
-
-             AddTexasTeaButton.Click += OnAddTexasTeaButtonClicked;
-             AddWaterButton.Click += OnAddWaterButtonClicked;
-             AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
-             AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
-              */
+            AddAngryChickenButton.Click += OnItemAddButtonClicked;
+            AddBakedBeansButton.Click += OnItemAddButtonClicked;
+            AddCornDodgersButton.Click += OnItemAddButtonClicked;
+            AddDakotaDoubleBurgerButton.Click += OnItemAddButtonClicked;
+            AddPanDeCampoButton.Click += OnItemAddButtonClicked;
+            AddPecosPulledPorkButton.Click += OnItemAddButtonClicked;
+            AddRustlersRibsButton.Click += OnItemAddButtonClicked;
+            AddTexasTripleBurgerButton.Click += OnItemAddButtonClicked;
+            AddTrailBurgerButton.Click += OnItemAddButtonClicked;
+            AddChiliCheeseFriesButton.Click += OnItemAddButtonClicked;
+            AddTexasTeaButton.Click += OnItemAddButtonClicked;
+            AddWaterButton.Click += OnItemAddButtonClicked;
+            AddJerkedSodaButton.Click += OnItemAddButtonClicked;
+            AddCowboyCoffeeButton.Click += OnItemAddButtonClicked;
+            
 
         }
 
-        /* alternative to hold everything in one method with parts from */
+        /// <summary>
+        /// Event handler for menuitem buttons calls correct constructor for button chosen and adds to the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnItemAddButtonClicked(object sender,RoutedEventArgs e)
         {
             orderControl = this.FindAncestor<OrderControl>();
@@ -58,99 +59,121 @@ namespace PointOfSale
             {
                 if (sender is Button button)
                 {
+                    IOrderItem nItem;
                     switch(button.Tag)
                     {
                         case "CowpokeChili":
-                            var entree = new CowpokeChili();
-                            var screen = new CustomizeCowpokeChili();
-                            screen.DataContext = entree;
+                            nItem  = new CowpokeChili();
+                           // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
                             order.Add(new CowpokeChili());
-                            orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "AngryChicken":
+                            nItem = new AngryChicken();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new AngryChicken());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+
+                        case "BakedBeans":
+                            nItem = new BakedBeans();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new BakedBeans());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+
+                        case "ChiliCheeseFries":
+                            nItem = new ChiliCheeseFries();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new ChiliCheeseFries());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "CornDodgers":
+                            nItem = new CornDodgers();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new CornDodgers());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "CowboyCoffee":
+                            nItem = new BakedBeans();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new BakedBeans());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "DakotaDoubleBurger":
+                            nItem = new DakotaDoubleBurger();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new DakotaDoubleBurger());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "JerkedSoda":
+                            nItem = new JerkedSoda();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new JerkedSoda());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "PanDeCampo":
+                            nItem = new PanDeCampo();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new PanDeCampo());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "PecosPulledPork":
+                            nItem = new PecosPulledPork();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new PecosPulledPork());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "RustlersRibs":
+                            nItem = new RustlersRibs();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new RustlersRibs());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "TexasTea":
+                            nItem = new TexasTea();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new TexasTea());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "TexasTripleBurger":
+                            nItem = new TexasTripleBurger();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new TexasTripleBurger());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "TrailBurger":
+                            nItem = new BakedBeans();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new TrailBurger());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                        case "Water":
+                            nItem = new BakedBeans();
+                            // var screen = new CustomizeCowpokeChili();
+                            //screen.DataContext = entree;
+                            order.Add(new CowboyCoffee());
+                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
                             break;
                     }
+                    
                 }
             }
         }
         
-
-
-        /*void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
-        {
-
-            ((Order)DataContext).Add(new CowpokeChili());
-
-        }        /*
-        void OnAddAngryChickenButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new AngryChicken());
-        }
-
-        void OnAddBakedBeansButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new BakedBeans());
-        }
-
-        void OnAddChiliCheeseFriesButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new ChiliCheeseFries());
-        }
-
-        void OnAddCornDodgersButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new CornDodgers());
-        }
-
-        void OnAddDakotaDoubleBurgerButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new DakotaDoubleBurger());
-        }
-
-        void OnAddJerkedSodaButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new JerkedSoda());
-        }
-
-        void OnAddPanDeCampoButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new PanDeCampo());
-        }
-
-        void OnAddPecosPulledPorkButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new PecosPulledPork());
-        }
-
-        void OnAddRustlersRibsButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new RustlersRibs());
-        }
-
-        void OnAddTexasTeaButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new TexasTea());
-        }
-
-        void OnAddTexasTripleBurgerButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new TexasTripleBurger());
-        }
-
-        void OnAddTrailBurgerButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new TrailBurger());
-        }
-
-        void OnAddWaterButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.Items.Add(new Water());
-        }
-
-        void OnAddCowboyCoffeeButtonClicked(Object sender, RoutedEventArgs e)
-        {
-            OrderListView.DataContext.(new CowboyCoffee());
-        }
-
-        }
-        */
     }
 }
