@@ -64,10 +64,10 @@ namespace PointOfSale
                     {
                         case "CowpokeChili":
                             nItem  = new CowpokeChili();
-                           // var screen = new CustomizeCowpokeChili();
-                            //screen.DataContext = entree;
+                            var screen = new CustomizeCowpokeChili();
+                            screen.DataContext = nItem;
                             order.Add(new CowpokeChili());
-                            //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            orderControl.SwapScreen(new CustomizeCowpokeChili());
                             break;
                         case "AngryChicken":
                             nItem = new AngryChicken();
@@ -100,10 +100,10 @@ namespace PointOfSale
                             //orderControl.SwapScreen(new CustomizeCowpokeChili());
                             break;
                         case "CowboyCoffee":
-                            nItem = new BakedBeans();
+                            nItem = new CowboyCoffee();
                             // var screen = new CustomizeCowpokeChili();
                             //screen.DataContext = entree;
-                            order.Add(new BakedBeans());
+                            order.Add(new CowboyCoffee());
                             //orderControl.SwapScreen(new CustomizeCowpokeChili());
                             break;
                         case "DakotaDoubleBurger":
@@ -172,6 +172,20 @@ namespace PointOfSale
                     }
                     
                 }
+            }
+        }
+
+        void AddItemCustomizationScreen(IOrderItem item, FrameworkElement screen)
+        {
+            var order = DataContext as Order;
+            if (order == null) throw new Exception("");
+            if (screen != null)
+            {
+                var orderControl = this.FindAncestor<OrderControl>();
+                if (orderControl == null) throw new Exception("");
+
+                screen.DataContext = item;
+                orderControl.SwapScreen(screen);
             }
         }
         
